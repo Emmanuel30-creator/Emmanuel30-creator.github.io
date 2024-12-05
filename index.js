@@ -120,21 +120,25 @@ class Question {
   let quiz = new Quiz(questions);
   quizApp();
 
+
+  //declaration des variables
 const boite=document.getElementById("boite_dialogue");
 const fermetureBouton=document.getElementById("btn");
 const lien = document.getElementById("lien");
 const resetBtn = document.getElementById("resetBtn");
-const btDialogue = document.getElementById("btDialogue")
 
+//creqtion des evenements
 window.addEventListener("load",Affiche);
 fermetureBouton.addEventListener("click",Fermer);
 lien.addEventListener("click", NePlusAfficher);
 resetBtn.addEventListener("click", ReprendreJeu)
 
 
+//creation des fonctions
 
-
-
+/**
+ * Fonction pour afficher la boite de dialogue
+ */
 function Affiche()
 {
   if(localStorage.getItem("verificateur", "true")){
@@ -144,19 +148,25 @@ function Affiche()
     boite.showModal();
   }
 }
-
+/**
+ * Fonction pour fermer la boite de dialogue
+ */
 function Fermer(){
   boite.showModal();
   boite.close();
 }
-
+/**
+ * fonction pour ne plus afficher la boite de dialogue
+ */
 function NePlusAfficher(){
   
   localStorage.setItem("verificateur", "true");
   boite.close();
   
 }
-
+/**
+ * fonction pour recommencer le jeu
+ */
 function ReprendreJeu(){
   quiz.score = 0;
   quiz.currentQuestionIndex = 0;
