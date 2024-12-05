@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="container" id="btDialogue">
     <div id="quiz">
       <h1><span>Q</span>uiz <i class="far fa-question-circle"></i></h1>
 
@@ -42,9 +42,39 @@
       <p id="progress"></p>
 
     </div>
+    <button type="reset" id="resetBtn">Recommencer</button>
   </div>
+
+    <dialog id="boite_dialogue">
+      <form id="contenu" method="dialog">
+        <div id="titre">
+            <h2 id="titre1">Projet personnel</h2><br>
+            <div class="ligne"></div> <br>
+            <p>Design web gr.2 - Automne 2024</p>
+        </div>
+        <div id="boite1">
+          <div id="texte">
+            <h2><b>Réalisé par</b></h2>
+            <p>Claude Mbessa</p><br>
+            <h2><b>Inspiration</b></h2>
+            <a href="#" id="lien1"> https://codepen.io/emilieph/pen/rNyoKVG</a>
+          </div>
+          <div id="ig">
+              <img src="https://design-web-victo.github.io/assets/images/megaman.png">
+            </div>
+            
+        </div>
+        
+        <div id="boite2">
+          <button type="submit" id="btn">Fermer la fenêtre</button>
+          
+        </div>
+        <a href="#" id="lien"><b>Ne plus afficher ce message</b></a>
+        
+      </form>
+    </dialog>
    
-  <script src="./script.js" type="text/javascript" ></script>
+ 
 </body>
 
 
